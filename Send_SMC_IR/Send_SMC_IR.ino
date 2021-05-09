@@ -61,7 +61,15 @@ void setup() {
 void loop() {
     
     IrSender.sendRaw(IdZeroSignal, sizeof(IdZeroSignal) / sizeof(IdZeroSignal[0]), KASEIKYO_KHZ); // Note the approach used to automatically calculate the size of the array.
-    //IrSender.sendRaw(IdZeroSignal, sizeof(IdZeroSignal) / sizeof(IdZeroSignal[0]), KASEIKYO_KHZ);//repeat
+    IrSender.sendRaw(IdZeroSignal, sizeof(IdZeroSignal) / sizeof(IdZeroSignal[0]), KASEIKYO_KHZ);//repeat
+    IrSender.sendRaw(IdZeroSignal, sizeof(IdZeroSignal) / sizeof(IdZeroSignal[0]), KASEIKYO_KHZ);
+    IrSender.sendRaw(IdZeroSignal, sizeof(IdZeroSignal) / sizeof(IdZeroSignal[0]), KASEIKYO_KHZ);
+    IrSender.sendRaw(IdZeroSignal, sizeof(IdZeroSignal) / sizeof(IdZeroSignal[0]), KASEIKYO_KHZ);
+    IrSender.sendRaw(IdZeroSignal, sizeof(IdZeroSignal) / sizeof(IdZeroSignal[0]), KASEIKYO_KHZ);
+    IrSender.sendRaw(IdZeroSignal, sizeof(IdZeroSignal) / sizeof(IdZeroSignal[0]), KASEIKYO_KHZ);
+    IrSender.sendRaw(IdZeroSignal, sizeof(IdZeroSignal) / sizeof(IdZeroSignal[0]), KASEIKYO_KHZ);
+    IrSender.sendRaw(IdZeroSignal, sizeof(IdZeroSignal) / sizeof(IdZeroSignal[0]), KASEIKYO_KHZ);
+    IrSender.sendRaw(IdZeroSignal, sizeof(IdZeroSignal) / sizeof(IdZeroSignal[0]), KASEIKYO_KHZ);
     delay(1000); // delay must be greater than 5 ms (RECORD_GAP_MICROS), otherwise the receiver sees it as one long signal
 
     IrSender.sendRaw(FreqUpSignal, sizeof(FreqUpSignal) / sizeof(FreqUpSignal[0]), KASEIKYO_KHZ);
@@ -69,8 +77,7 @@ void loop() {
     delay(1000);//2回押さないとアップしない
     IrSender.sendRaw(FreqUpSignal, sizeof(FreqUpSignal) / sizeof(FreqUpSignal[0]), KASEIKYO_KHZ);
     //IrSender.sendRaw(FreqUpSignal, sizeof(FreqUpSignal) / sizeof(FreqUpSignal[0]), KASEIKYO_KHZ);//repeat
-
-    delay(1000);
+    delay(3000);
     
     //delay(1000 + random(0,10) * 1000);//5~15秒のランダム間隔で変化
 
